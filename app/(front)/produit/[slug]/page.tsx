@@ -1,10 +1,23 @@
 import AddToCart from "@components/products/AddToCart";
-import data from "@lib/data";
+import { convertDocToObj } from "@lib/utils";
+import productService from "@lib/services/product.service";
 import Image from "next/image";
 import Link from "next/link";
 
-const ProductDetails = ({ params }: { params: { slug: string } }) => {
-  const product = data.products.find((p) => p.slug === params.slug);
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const product = await productService.getBySlug(params.slug);
+  if (!product) {
+    return { title: "Produit introuvable" };
+  }
+
+  return {
+    title: product.name,
+    description: product.description,
+  };
+}
+
+const ProductDetails = async ({ params }: { params: { slug: string } }) => {
+  const product = await productService.getBySlug(params.slug);
 
   if (!product) {
     return <div>Produit introuvable</div>;
@@ -54,7 +67,7 @@ const ProductDetails = ({ params }: { params: { slug: string } }) => {
             </div>
             {product.countInStock !== 0 && (
               <div className="card-actions justify-center">
-                <AddToCart item={{ ...product, qty: 0, color: "", size: "" }} />
+                <AddToCart item={{ ...convertDocToObj(product), qty: 0, color: "", size: "" }} />
               </div>
             )}
           </div>
