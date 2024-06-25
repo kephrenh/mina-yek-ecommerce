@@ -41,7 +41,7 @@ function CartDetails() {
                   <tr key={item.slug}>
                     <td>
                       <Link
-                        href={`/produit/${item.slug}`}
+                        href={`/product/${item.slug}`}
                         className="flex items-center">
                         <Image
                           src={item.image}
@@ -83,7 +83,7 @@ function CartDetails() {
                 </li>
                 <li>
                   <button
-                    onClick={() => router.push("/livraison")}
+                    onClick={() => router.push("/signin")}
                     className="btn btn-primary w-full">
                     Choisir ma livraison
                   </button>
