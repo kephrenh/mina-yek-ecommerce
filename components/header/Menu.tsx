@@ -27,7 +27,7 @@ const Menu = () => {
             <Link
               href="/cart"
               className="btn btn-ghost rounded-btn">
-              Panier
+              Mon panier
               {mounted && items.length !== 0 && (
                 <div className="badge badge-secondary">{items.reduce((a, c) => a + c.qty, 0)} </div>
               )}
@@ -63,7 +63,7 @@ const Menu = () => {
                       <button
                         type="button"
                         onClick={signoutHandler}>
-                        Sign Out
+                        Se déconnecter
                       </button>
                     </li>
                   </ul>
@@ -76,7 +76,7 @@ const Menu = () => {
                 type="button"
                 className="btn btn-ghost rounded-btn"
                 onClick={() => signIn()}>
-                Sign In
+                Connectez-vous
               </button>
             </li>
           )}
