@@ -83,7 +83,7 @@ function CartDetails() {
                 </li>
                 <li>
                   <button
-                    onClick={() => router.push("/signin")}
+                    onClick={() => router.push("/shipping")}
                     className="btn btn-primary w-full">
                     Choisir ma livraison
                   </button>
