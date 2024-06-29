@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Form from "./Form";
 
 export const metadata: Metadata = {
-  title: "Méthode de paiement",
+  title: "Choisir mon mode de paiement",
 };
 
 const PaymentPage = () => {

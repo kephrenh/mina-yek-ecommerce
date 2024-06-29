@@ -105,7 +105,7 @@ const Form = () => {
                 disabled={isSubmitting}
                 className="btn btn-primary w-full">
                 {isSubmitting && <span className="loading loading-spinner"></span>}
-                Next
+                Continuer
               </button>
             </div>
           </form>

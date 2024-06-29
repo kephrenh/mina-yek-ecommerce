@@ -24,7 +24,7 @@ export default async function Home() {
               key={product._id}
               id={`slide-${index}`}
               className="carousel-item relative w-full">
-              <Link href={`/produit/${product.slug}`}>
+              <Link href={`/product/${product.slug}`}>
                 <img
                   src={product.banner}
                   alt={product.name}

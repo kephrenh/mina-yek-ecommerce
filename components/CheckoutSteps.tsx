@@ -1,4 +1,4 @@
-const steps: string[] = ["Connexion", "Adresse de livraison", "Méthode de paiement", "Commander"];
+const steps: string[] = ["Connexion", "Adresse de livraison", "Mode de paiement", "Commander"];
 
 const CheckoutSteps = ({ current = 0 }) => {
   return (

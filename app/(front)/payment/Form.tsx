@@ -26,7 +26,7 @@ const Form = () => {
       <CheckoutSteps current={2} />
       <div className="max-w-sm mx-auto card bg-base-300 my-4">
         <div className="card-body">
-          <h1 className="card-title">Méthode de paiement</h1>
+          <h1 className="card-title">Mode de paiement</h1>
           <form onSubmit={handleSubmit}>
             {["PayPal", "Stripe", "CashOnDelivery"].map((payment) => (
               <div key={payment}>
@@ -47,7 +47,7 @@ const Form = () => {
               <button
                 type="submit"
                 className="btn btn-primary w-full">
-                Next
+                Continuer
               </button>
             </div>
             <div className="my-2">
@@ -55,7 +55,7 @@ const Form = () => {
                 type="button"
                 className="btn w-full my-2"
                 onClick={() => router.back()}>
-                Back
+                Retour
               </button>
             </div>
           </form>
